@@ -11,6 +11,7 @@ import com.ivanmorgillo.fromgodactivitytomvp.helpers.DateTimeSerializer;
 import org.joda.time.DateTime;
 import org.joda.time.format.ISODateTimeFormat;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,11 +24,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    DateTimeSerializer dateSerializer = new DateTimeSerializer(ISODateTimeFormat.dateTimeParser().withZoneUTC());
+
+    Gson gson = new GsonBuilder().registerTypeAdapter(DateTime.class, dateSerializer).create();
+
+    private StackOverflowApiManager apiManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +53,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        DateTimeSerializer dateSerializer = new DateTimeSerializer(ISODateTimeFormat.dateTimeParser().withZoneUTC());
-        Gson gson = new GsonBuilder().registerTypeAdapter(DateTime.class, dateSerializer).create();
+        apiManager = new StackOverflowApiManager(gson, getCacheDir(), getString(R.string.server));
 
-        StackOverflowApiManager apiManager = new StackOverflowApiManager(gson, getCacheDir(), getString(R.string.server));
+        new SearchAndroid().execute();
+    }
 
-        Call<SearchResponse> posts = apiManager.doSearchForTitle("android");
-        try {
-        List<Question> questions = posts.execute().body().getQuestions();
-            for (Question question : questions) {
-                Log.d("GDG", question.toString());
+    private class SearchAndroid extends AsyncTask<Void, Void, List<Question>> {
+
+        @Override
+        protected List<Question> doInBackground(Void... args) {
+            Call<SearchResponse> posts = apiManager.doSearchForTitle("android");
+            List<Question> questions = new ArrayList<>();
+            try {
+                questions = posts.execute().body().getQuestions();
+            } catch (IOException e) {
+                Log.e("GDG", e.getLocalizedMessage());
             }
-        } catch (IOException e) {
-            Log.e("GDG", e.getLocalizedMessage());
+            return questions;
+        }
+
+        @Override
+        protected void onPostExecute(List<Question> questions) {
+            for (Question question : questions) {
+                Log.d("GDG", question.getTitle());
+            }
         }
     }
 
