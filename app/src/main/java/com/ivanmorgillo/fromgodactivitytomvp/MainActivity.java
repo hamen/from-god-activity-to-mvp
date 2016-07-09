@@ -7,6 +7,7 @@ import com.ivanmorgillo.fromgodactivitytomvp.api.StackOverflowApiManager;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.Question;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.SearchResponse;
 import com.ivanmorgillo.fromgodactivitytomvp.helpers.DateTimeSerializer;
+import com.ivanmorgillo.fromgodactivitytomvp.ui.QuestionsAdapter;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.ISODateTimeFormat;
@@ -18,6 +19,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -37,6 +40,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private StackOverflowApiManager apiManager;
 
+    private RecyclerView recyclerView;
+
+    private QuestionsAdapter adapter;
+
+    List<Question> questions = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +61,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView.setHasFixedSize(true);
+
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(MainActivity.this);
+        recyclerView.setLayoutManager(mLayoutManager);
+
+        adapter = new QuestionsAdapter(questions);
+        recyclerView.setAdapter(adapter);
 
         apiManager = new StackOverflowApiManager(gson, getCacheDir(), getString(R.string.server));
 
@@ -74,9 +92,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         @Override
         protected void onPostExecute(List<Question> questions) {
-            for (Question question : questions) {
-                Log.d("GDG", question.getTitle());
-            }
+            adapter.setQuestions(questions);
         }
     }
 
