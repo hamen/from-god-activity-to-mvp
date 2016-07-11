@@ -1,4 +1,4 @@
-package com.ivanmorgillo.fromgodactivitytomvp.god;
+package com.ivanmorgillo.fromgodactivitytomvp.mvp.ui;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -7,8 +7,8 @@ import com.ivanmorgillo.fromgodactivitytomvp.R;
 import com.ivanmorgillo.fromgodactivitytomvp.api.StackOverflowApiManager;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.Question;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.SearchResponse;
+import com.ivanmorgillo.fromgodactivitytomvp.god.GodActivity;
 import com.ivanmorgillo.fromgodactivitytomvp.helpers.DateTimeSerializer;
-import com.ivanmorgillo.fromgodactivitytomvp.mvp.ui.MvpActivity;
 import com.ivanmorgillo.fromgodactivitytomvp.ui.QuestionsAdapter;
 
 import org.joda.time.DateTime;
@@ -35,15 +35,13 @@ import java.util.List;
 
 import retrofit2.Call;
 
-public class GodActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MvpActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DateTimeSerializer dateSerializer = new DateTimeSerializer(ISODateTimeFormat.dateTimeParser().withZoneUTC());
 
     Gson gson = new GsonBuilder().registerTypeAdapter(DateTime.class, dateSerializer).create();
 
     private StackOverflowApiManager apiManager;
-
-    private RecyclerView recyclerView;
 
     private QuestionsAdapter adapter;
 
@@ -67,10 +65,10 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(GodActivity.this);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(MvpActivity.this);
         recyclerView.setLayoutManager(mLayoutManager);
 
         adapter = new QuestionsAdapter(questions);
@@ -113,7 +111,7 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(1).setChecked(true);
         return true;
     }
 
@@ -128,9 +126,10 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
         int id = item.getItemId();
 
         if (id == R.id.nav_god) {
-        } else if (id == R.id.nav_mvp) {
-            startActivity(new Intent(this, MvpActivity.class));
+            startActivity(new Intent(this, GodActivity.class));
             finish();
+        } else if (id == R.id.nav_mvp) {
+
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
