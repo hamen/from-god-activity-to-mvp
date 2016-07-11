@@ -39,6 +39,9 @@ dependencies {
     apt "com.google.dagger:dagger-compiler:2.5"
     provided 'org.glassfish:javax.annotation:10.0-b28'
 
+    compile 'com.jakewharton:butterknife:8.2.0'
+    apt 'com.jakewharton:butterknife-compiler:8.2.0'
+
     compile 'joda-time:joda-time:2.4'
 
     compile 'com.google.code.gson:gson:2.4'

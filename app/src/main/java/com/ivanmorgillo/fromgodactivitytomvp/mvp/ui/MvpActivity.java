@@ -1,18 +1,12 @@
 package com.ivanmorgillo.fromgodactivitytomvp.mvp.ui;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
+import com.ivanmorgillo.fromgodactivitytomvp.MainApplication;
 import com.ivanmorgillo.fromgodactivitytomvp.R;
 import com.ivanmorgillo.fromgodactivitytomvp.api.StackOverflowApiManager;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.Question;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.SearchResponse;
 import com.ivanmorgillo.fromgodactivitytomvp.god.GodActivity;
-import com.ivanmorgillo.fromgodactivitytomvp.helpers.DateTimeSerializer;
 import com.ivanmorgillo.fromgodactivitytomvp.ui.QuestionsAdapter;
-
-import org.joda.time.DateTime;
-import org.joda.time.format.ISODateTimeFormat;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -28,20 +22,36 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import retrofit2.Call;
 
-public class MvpActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MvpActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IMvpView {
 
-    DateTimeSerializer dateSerializer = new DateTimeSerializer(ISODateTimeFormat.dateTimeParser().withZoneUTC());
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
 
-    Gson gson = new GsonBuilder().registerTypeAdapter(DateTime.class, dateSerializer).create();
+    @BindView(R.id.recyclerview)
+    RecyclerView recyclerView;
 
-    private StackOverflowApiManager apiManager;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawer;
+
+    @Inject
+    StackOverflowApiManager apiManager;
 
     private QuestionsAdapter adapter;
 
@@ -49,14 +59,16 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
 
     private NavigationView navigationView;
 
+    private Unbinder unbinder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MainApplication.component().inject(this);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        unbinder = ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open,
             R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -65,7 +77,6 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(MvpActivity.this);
@@ -74,9 +85,27 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
         adapter = new QuestionsAdapter(questions);
         recyclerView.setAdapter(adapter);
 
-        apiManager = new StackOverflowApiManager(gson, getCacheDir(), getString(R.string.server));
-
         new SearchAndroid().execute();
+    }
+
+    @Override
+    public void showProgress() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgress() {
+        progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showList() {
+
+    }
+
+    @Override
+    public void hideList() {
+
     }
 
     private class SearchAndroid extends AsyncTask<Void, Void, List<Question>> {
@@ -134,5 +163,11 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }

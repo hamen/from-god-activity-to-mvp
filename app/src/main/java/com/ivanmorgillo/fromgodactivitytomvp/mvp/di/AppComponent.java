@@ -1,6 +1,6 @@
 package com.ivanmorgillo.fromgodactivitytomvp.mvp.di;
 
-import com.ivanmorgillo.fromgodactivitytomvp.god.GodActivity;
+import com.ivanmorgillo.fromgodactivitytomvp.mvp.ui.MvpActivity;
 
 import javax.inject.Singleton;
 
@@ -10,5 +10,5 @@ import dagger.Component;
 @Component(modules = AndroidModule.class)
 public interface AppComponent {
 
-    void inject(GodActivity godActivity);
+    void inject(MvpActivity mvpActivity);
 }
