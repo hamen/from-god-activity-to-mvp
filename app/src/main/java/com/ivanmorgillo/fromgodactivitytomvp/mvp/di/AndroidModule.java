@@ -1,4 +1,4 @@
-package com.ivanmorgillo.fromgodactivitytomvp.di;
+package com.ivanmorgillo.fromgodactivitytomvp.mvp.di;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

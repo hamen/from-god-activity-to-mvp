@@ -1,8 +1,8 @@
 package com.ivanmorgillo.fromgodactivitytomvp;
 
-import com.ivanmorgillo.fromgodactivitytomvp.di.AndroidModule;
-import com.ivanmorgillo.fromgodactivitytomvp.di.AppComponent;
-import com.ivanmorgillo.fromgodactivitytomvp.di.DaggerAppComponent;
+import com.ivanmorgillo.fromgodactivitytomvp.mvp.di.AndroidModule;
+import com.ivanmorgillo.fromgodactivitytomvp.mvp.di.AppComponent;
+import com.ivanmorgillo.fromgodactivitytomvp.mvp.di.DaggerAppComponent;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;

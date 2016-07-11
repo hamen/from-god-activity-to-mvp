@@ -1,8 +1,9 @@
-package com.ivanmorgillo.fromgodactivitytomvp;
+package com.ivanmorgillo.fromgodactivitytomvp.god;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import com.ivanmorgillo.fromgodactivitytomvp.R;
 import com.ivanmorgillo.fromgodactivitytomvp.api.StackOverflowApiManager;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.Question;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.SearchResponse;
@@ -32,7 +33,7 @@ import java.util.List;
 
 import retrofit2.Call;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class GodActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DateTimeSerializer dateSerializer = new DateTimeSerializer(ISODateTimeFormat.dateTimeParser().withZoneUTC());
 
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(MainActivity.this);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(GodActivity.this);
         recyclerView.setLayoutManager(mLayoutManager);
 
         adapter = new QuestionsAdapter(questions);

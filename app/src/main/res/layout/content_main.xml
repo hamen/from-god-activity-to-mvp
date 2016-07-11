@@ -7,7 +7,7 @@
   android:layout_height="match_parent"
   app:layout_behavior="@string/appbar_scrolling_view_behavior"
   tools:showIn="@layout/app_bar_main"
-  tools:context="com.ivanmorgillo.fromgodactivitytomvp.MainActivity">
+  tools:context=".god.GodActivity">
 
   <android.support.v7.widget.RecyclerView
     android:id="@+id/recyclerview"
