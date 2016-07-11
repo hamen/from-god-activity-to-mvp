@@ -28,6 +28,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,6 +53,8 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
 
     private NavigationView navigationView;
 
+    private ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +70,8 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -84,6 +90,11 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
     private class SearchAndroid extends AsyncTask<Void, Void, List<Question>> {
 
         @Override
+        protected void onPreExecute() {
+            progressBar.setVisibility(View.VISIBLE);
+        }
+
+        @Override
         protected List<Question> doInBackground(Void... args) {
             Call<SearchResponse> posts = apiManager.doSearchForTitle("android");
             List<Question> questions = new ArrayList<>();
@@ -97,6 +108,7 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
 
         @Override
         protected void onPostExecute(List<Question> questions) {
+            progressBar.setVisibility(View.GONE);
             adapter.setQuestions(questions);
         }
     }
