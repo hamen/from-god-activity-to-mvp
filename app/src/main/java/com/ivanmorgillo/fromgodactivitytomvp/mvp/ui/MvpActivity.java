@@ -2,14 +2,11 @@ package com.ivanmorgillo.fromgodactivitytomvp.mvp.ui;
 
 import com.ivanmorgillo.fromgodactivitytomvp.MainApplication;
 import com.ivanmorgillo.fromgodactivitytomvp.R;
-import com.ivanmorgillo.fromgodactivitytomvp.api.StackOverflowApiManager;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.Question;
-import com.ivanmorgillo.fromgodactivitytomvp.api.models.SearchResponse;
 import com.ivanmorgillo.fromgodactivitytomvp.god.GodActivity;
 import com.ivanmorgillo.fromgodactivitytomvp.ui.QuestionsAdapter;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,13 +16,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +29,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import retrofit2.Call;
 
 public class MvpActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IMvpView {
 
@@ -51,7 +45,7 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
     DrawerLayout drawer;
 
     @Inject
-    StackOverflowApiManager apiManager;
+    MvpPresenter presenter;
 
     private QuestionsAdapter adapter;
 
@@ -67,8 +61,9 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
         MainApplication.component().inject(this);
         setContentView(R.layout.activity_main);
         unbinder = ButterKnife.bind(this);
-        setSupportActionBar(toolbar);
+        presenter.setView(this);
 
+        setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open,
             R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -85,7 +80,7 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
         adapter = new QuestionsAdapter(questions);
         recyclerView.setAdapter(adapter);
 
-        new SearchAndroid().execute();
+        presenter.loadQuestions();
     }
 
     @Override
@@ -100,32 +95,17 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
 
     @Override
     public void showList() {
-
+        recyclerView.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideList() {
-
+        recyclerView.setVisibility(View.GONE);
     }
 
-    private class SearchAndroid extends AsyncTask<Void, Void, List<Question>> {
-
-        @Override
-        protected List<Question> doInBackground(Void... args) {
-            Call<SearchResponse> posts = apiManager.doSearchForTitle("android");
-            List<Question> questions = new ArrayList<>();
-            try {
-                questions = posts.execute().body().getQuestions();
-            } catch (IOException e) {
-                Log.e("GDG", e.getLocalizedMessage());
-            }
-            return questions;
-        }
-
-        @Override
-        protected void onPostExecute(List<Question> questions) {
-            adapter.setQuestions(questions);
-        }
+    @Override
+    public void updateList(List<Question> questions) {
+        adapter.setQuestions(questions);
     }
 
     @Override

@@ -9,23 +9,16 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import android.app.Application;
 
-import lombok.Getter;
-import lombok.experimental.Accessors;
-
-@Accessors(prefix = "m")
 public class MainApplication extends Application {
-
-    @Getter
-    private static MainApplication mMainApplication;
 
     private static AppComponent component;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mMainApplication = this;
         component = DaggerAppComponent.builder()
-            .androidModule(new AndroidModule(this)).build();
+            .androidModule(new AndroidModule(this))
+            .build();
 
         setupUil();
 

@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 @Singleton
-@Component(modules = AndroidModule.class)
+@Component(modules = {AndroidModule.class, Providers.class})
 public interface AppComponent {
 
     void inject(MvpActivity mvpActivity);
