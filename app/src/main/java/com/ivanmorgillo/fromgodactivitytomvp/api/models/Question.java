@@ -1,19 +1,19 @@
 package com.ivanmorgillo.fromgodactivitytomvp.api.models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.google.gson.annotations.SerializedName;
 
 import org.joda.time.DateTime;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
+import lombok.Data;
 import lombok.Getter;
-import lombok.ToString;
 import lombok.experimental.Accessors;
 
-@ToString
+@Data
 @Accessors(prefix="m")
 public class Question implements Parcelable {
 

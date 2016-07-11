@@ -1,0 +1,769 @@
+{
+    "items": [
+        {
+            "tags": [
+                "android",
+                "bluetooth-lowenergy",
+                "android-wear"
+            ],
+            "owner": {
+                "reputation": 1,
+                "user_id": 6273002,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/6477afadd355c407b8939356bdbdc3f6?s=128&d=identicon&r=PG&f=1",
+                "display_name": "bkokot",
+                "link": "http://stackoverflow.com/users/6273002/bkokot"
+            },
+            "is_answered": false,
+            "view_count": 11,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1468231584,
+            "creation_date": 1465897880,
+            "question_id": 37808626,
+            "link": "http://stackoverflow.com/questions/37808626/is-it-possible-to-connect-ble-sensor-device-to-android-watch-without-a-phone-nea",
+            "title": "Is it possible to connect BLE sensor device to android watch without a phone nearby?"
+        },
+        {
+            "tags": [
+                "android",
+                "appcompat",
+                "android-switch",
+                "switchcompat"
+            ],
+            "owner": {
+                "reputation": 41,
+                "user_id": 4938112,
+                "user_type": "registered",
+                "accept_rate": 100,
+                "profile_image": "https://lh6.googleusercontent.com/-YpO0XI7jKrQ/AAAAAAAAAAI/AAAAAAAAAQM/x5a_ZGhN-mU/photo.jpg?sz=128",
+                "display_name": "Davide3i",
+                "link": "http://stackoverflow.com/users/4938112/davide3i"
+            },
+            "is_answered": false,
+            "view_count": 3,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1468231551,
+            "creation_date": 1468231551,
+            "question_id": 38304203,
+            "link": "http://stackoverflow.com/questions/38304203/android-switchcompat-thumbtextpadding-issue",
+            "title": "Android SwitchCompat: thumbTextPadding issue"
+        },
+        {
+            "tags": [
+                "android",
+                "android-studio",
+                "android-gradle",
+                "apache-httpclient-4.x"
+            ],
+            "owner": {
+                "reputation": 4018,
+                "user_id": 1024973,
+                "user_type": "registered",
+                "accept_rate": 72,
+                "profile_image": "https://www.gravatar.com/avatar/e9a46874cd35d5753507f10188ec83a8?s=128&d=identicon&r=PG",
+                "display_name": "Alex",
+                "link": "http://stackoverflow.com/users/1024973/alex"
+            },
+            "is_answered": true,
+            "view_count": 194688,
+            "protected_date": 1466881928,
+            "accepted_answer_id": 32153434,
+            "answer_count": 16,
+            "score": 161,
+            "last_activity_date": 1468231536,
+            "creation_date": 1440226611,
+            "last_edit_date": 1452264304,
+            "question_id": 32153318,
+            "link": "http://stackoverflow.com/questions/32153318/httpclient-wont-import-in-android-studio",
+            "title": "HttpClient won't import in Android Studio"
+        },
+        {
+            "tags": [
+                "android"
+            ],
+            "owner": {
+                "reputation": 2199,
+                "user_id": 405383,
+                "user_type": "registered",
+                "accept_rate": 55,
+                "profile_image": "https://www.gravatar.com/avatar/e169f2f42a8369cfdae51218fbcceb33?s=128&d=identicon&r=PG",
+                "display_name": "Hunt",
+                "link": "http://stackoverflow.com/users/405383/hunt"
+            },
+            "is_answered": false,
+            "view_count": 8,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1468231445,
+            "creation_date": 1468231445,
+            "question_id": 38304163,
+            "link": "http://stackoverflow.com/questions/38304163/new-line-when-user-press-enter-in-edit-text-in-android",
+            "title": "new line when user press enter in edit text in android"
+        },
+        {
+            "tags": [
+                "android",
+                "user-interface",
+                "imageview"
+            ],
+            "owner": {
+                "reputation": 8,
+                "user_id": 5635548,
+                "user_type": "registered",
+                "profile_image": "https://lh4.googleusercontent.com/-CeUBHv1XDL8/AAAAAAAAAAI/AAAAAAAAABo/CRqMYSHkAMM/photo.jpg?sz=128",
+                "display_name": "Brad Yuan",
+                "link": "http://stackoverflow.com/users/5635548/brad-yuan"
+            },
+            "is_answered": false,
+            "view_count": 19,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1468231427,
+            "creation_date": 1468229674,
+            "question_id": 38303613,
+            "link": "http://stackoverflow.com/questions/38303613/android-sutio2-1-errorunable-to-start-activity-componentinfo",
+            "title": "android sutio2.1: Error Unable to start activity ComponentInfo"
+        },
+        {
+            "tags": [
+                "android"
+            ],
+            "owner": {
+                "reputation": 1841,
+                "user_id": 172265,
+                "user_type": "registered",
+                "accept_rate": 52,
+                "profile_image": "https://www.gravatar.com/avatar/7d658f2c111ae5d8b48f0f0aa7624372?s=128&d=identicon&r=PG",
+                "display_name": "lang2",
+                "link": "http://stackoverflow.com/users/172265/lang2"
+            },
+            "is_answered": false,
+            "view_count": 4,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1468231397,
+            "creation_date": 1468231397,
+            "question_id": 38304146,
+            "link": "http://stackoverflow.com/questions/38304146/android-disconnect-the-phone-entirely",
+            "title": "Android: disconnect the phone entirely"
+        },
+        {
+            "tags": [
+                "android",
+                "google-maps"
+            ],
+            "owner": {
+                "reputation": 8,
+                "user_id": 5510642,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/16600ec562ee0d20d3ceadb34403ff7e?s=128&d=identicon&r=PG&f=1",
+                "display_name": "purewatashi21",
+                "link": "http://stackoverflow.com/users/5510642/purewatashi21"
+            },
+            "is_answered": false,
+            "view_count": 22,
+            "answer_count": 4,
+            "score": 0,
+            "last_activity_date": 1468231381,
+            "creation_date": 1468178647,
+            "question_id": 38295687,
+            "link": "http://stackoverflow.com/questions/38295687/blank-google-maps-mapview-in-android",
+            "title": "Blank Google Maps MapView in android"
+        },
+        {
+            "tags": [
+                "android",
+                "android-viewpager",
+                "horizontalscrollview"
+            ],
+            "owner": {
+                "reputation": 6,
+                "user_id": 4211708,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/7b18c7df4e66e6999f70e2c7c53633e8?s=128&d=identicon&r=PG&f=1",
+                "display_name": "kinyas",
+                "link": "http://stackoverflow.com/users/4211708/kinyas"
+            },
+            "is_answered": false,
+            "view_count": 11,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1468231370,
+            "creation_date": 1468231370,
+            "question_id": 38304141,
+            "link": "http://stackoverflow.com/questions/38304141/how-to-set-images-into-the-viewpager-from-horizontalscrollview-in-android",
+            "title": "how to set images into the viewpager from horizontalscrollview in android"
+        },
+        {
+            "tags": [
+                "android",
+                "gridview"
+            ],
+            "owner": {
+                "reputation": 1,
+                "user_id": 6404165,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/03e77ffbaa241c647e8ec0443cd30bfd?s=128&d=identicon&r=PG&f=1",
+                "display_name": "Maha Mrityunjaya Saraswati",
+                "link": "http://stackoverflow.com/users/6404165/maha-mrityunjaya-saraswati"
+            },
+            "is_answered": false,
+            "view_count": 19,
+            "answer_count": 2,
+            "score": 0,
+            "last_activity_date": 1468231350,
+            "creation_date": 1468228455,
+            "last_edit_date": 1468228692,
+            "question_id": 38303203,
+            "link": "http://stackoverflow.com/questions/38303203/how-to-animate-a-gridview-by-column-wise-in-android",
+            "title": "how to animate a gridview by column wise in android"
+        },
+        {
+            "tags": [
+                "android",
+                "android-asynctask"
+            ],
+            "owner": {
+                "reputation": 25,
+                "user_id": 3235831,
+                "user_type": "registered",
+                "accept_rate": 25,
+                "profile_image": "https://graph.facebook.com/1657962024/picture?type=large",
+                "display_name": "user3235831",
+                "link": "http://stackoverflow.com/users/3235831/user3235831"
+            },
+            "is_answered": false,
+            "view_count": 396,
+            "answer_count": 2,
+            "score": 1,
+            "last_activity_date": 1468231218,
+            "creation_date": 1407250145,
+            "last_edit_date": 1468231218,
+            "question_id": 25141818,
+            "link": "http://stackoverflow.com/questions/25141818/android-asynctask-get-blocks-doinbackground",
+            "title": "Android AsyncTask get blocks doInBackground"
+        },
+        {
+            "tags": [
+                "java",
+                "android",
+                "scrollview"
+            ],
+            "owner": {
+                "reputation": 1492,
+                "user_id": 1866707,
+                "user_type": "registered",
+                "accept_rate": 83,
+                "profile_image": "https://www.gravatar.com/avatar/8946e964ee1d02fe23ece97fb7fd54ac?s=128&d=identicon&r=PG",
+                "display_name": "Matt",
+                "link": "http://stackoverflow.com/users/1866707/matt"
+            },
+            "is_answered": true,
+            "view_count": 6117,
+            "answer_count": 6,
+            "score": 1,
+            "last_activity_date": 1468231196,
+            "creation_date": 1376313990,
+            "question_id": 18188201,
+            "link": "http://stackoverflow.com/questions/18188201/focus-scrollview-to-selected-position-programmatically-android",
+            "title": "Focus ScrollView to selected position programmatically - Android"
+        },
+        {
+            "tags": [
+                "android",
+                "multithreading",
+                "listview",
+                "android-asynctask",
+                "android-progressbar"
+            ],
+            "owner": {
+                "reputation": 1,
+                "user_id": 6573922,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/f1a927777dd3aeadef3323ff3b5da225?s=128&d=identicon&r=PG&f=1",
+                "display_name": "DavidOli",
+                "link": "http://stackoverflow.com/users/6573922/davidoli"
+            },
+            "is_answered": false,
+            "view_count": 13,
+            "answer_count": 0,
+            "score": -4,
+            "last_activity_date": 1468230863,
+            "creation_date": 1468230863,
+            "question_id": 38303992,
+            "link": "http://stackoverflow.com/questions/38303992/download-progressbar-in-android",
+            "title": "Download ProgressBar in android"
+        },
+        {
+            "tags": [
+                "android",
+                "android-layout",
+                "android-relativelayout"
+            ],
+            "owner": {
+                "reputation": 20,
+                "user_id": 3108762,
+                "user_type": "registered",
+                "accept_rate": 75,
+                "profile_image": "https://www.gravatar.com/avatar/cf676fa2c17d158f7dcca742ec566789?s=128&d=identicon&r=PG&f=1",
+                "display_name": "J. Natael",
+                "link": "http://stackoverflow.com/users/3108762/j-natael"
+            },
+            "is_answered": true,
+            "view_count": 283,
+            "accepted_answer_id": 35332788,
+            "answer_count": 3,
+            "score": 0,
+            "last_activity_date": 1468230825,
+            "creation_date": 1455159924,
+            "last_edit_date": 1455242746,
+            "question_id": 35330078,
+            "link": "http://stackoverflow.com/questions/35330078/android-relative-layout-is-running-off-screen",
+            "title": "Android Relative Layout is running off screen"
+        },
+        {
+            "tags": [
+                "android",
+                "sqlite"
+            ],
+            "owner": {
+                "reputation": 16,
+                "user_id": 5385833,
+                "user_type": "registered",
+                "accept_rate": 100,
+                "profile_image": "https://i.stack.imgur.com/MHuKq.jpg?s=128&g=1",
+                "display_name": "ahmadsfff",
+                "link": "http://stackoverflow.com/users/5385833/ahmadsfff"
+            },
+            "is_answered": false,
+            "view_count": 12,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1468230803,
+            "creation_date": 1468230803,
+            "question_id": 38303967,
+            "link": "http://stackoverflow.com/questions/38303967/adding-external-sqlite-database-to-android-studio",
+            "title": "adding external SQLite database to android Studio"
+        },
+        {
+            "tags": [
+                "android",
+                "sdk",
+                "android-sdk-tools"
+            ],
+            "owner": {
+                "reputation": 1256,
+                "user_id": 1912562,
+                "user_type": "registered",
+                "accept_rate": 58,
+                "profile_image": "https://i.stack.imgur.com/YGxFa.jpg?s=128&g=1",
+                "display_name": "aton1004",
+                "link": "http://stackoverflow.com/users/1912562/aton1004"
+            },
+            "is_answered": true,
+            "view_count": 22610,
+            "accepted_answer_id": 13931326,
+            "answer_count": 5,
+            "score": 10,
+            "last_activity_date": 1468230657,
+            "creation_date": 1355827089,
+            "last_edit_date": 1355827471,
+            "question_id": 13931110,
+            "link": "http://stackoverflow.com/questions/13931110/how-to-determine-the-version-of-android-sdk-installed-in-computer",
+            "title": "How to determine the version of android SDK installed in computer?"
+        },
+        {
+            "tags": [
+                "android",
+                "ios",
+                "bluetooth-lowenergy",
+                "ble"
+            ],
+            "owner": {
+                "reputation": 1,
+                "user_id": 6490553,
+                "user_type": "registered",
+                "profile_image": "https://i.stack.imgur.com/f9tBL.jpg?s=128&g=1",
+                "display_name": "Deepak Aagri",
+                "link": "http://stackoverflow.com/users/6490553/deepak-aagri"
+            },
+            "is_answered": false,
+            "view_count": 25,
+            "answer_count": 1,
+            "score": -1,
+            "last_activity_date": 1468230471,
+            "creation_date": 1466447119,
+            "question_id": 37929318,
+            "link": "http://stackoverflow.com/questions/37929318/how-to-turn-on-advisement-mode-of-ble-device-by-peripheral-device-like-android",
+            "title": "How to turn on advisement mode of BLE device by peripheral device (like android phone)?"
+        },
+        {
+            "tags": [
+                "android"
+            ],
+            "owner": {
+                "reputation": 1,
+                "user_id": 6573860,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/c91fb957b329825eed9c1c17f0dbb54a?s=128&d=identicon&r=PG&f=1",
+                "display_name": "Sneha",
+                "link": "http://stackoverflow.com/users/6573860/sneha"
+            },
+            "is_answered": false,
+            "view_count": 15,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1468230382,
+            "creation_date": 1468230382,
+            "question_id": 38303827,
+            "link": "http://stackoverflow.com/questions/38303827/the-build-gets-failed-everytime-i-run-i-have-already-installed-android-sdk-plat",
+            "title": "The build gets failed everytime I run. I have already installed android sdk platform 19...Please help me get out of this. Thank you"
+        },
+        {
+            "tags": [
+                "xamarin",
+                "xamarin.android",
+                "admob",
+                "google-play-services",
+                "android-support-library"
+            ],
+            "owner": {
+                "reputation": 385,
+                "user_id": 1051622,
+                "user_type": "registered",
+                "accept_rate": 43,
+                "profile_image": "https://www.gravatar.com/avatar/8e6a3657c9454ca1f13cdb882590a4fa?s=128&d=identicon&r=PG",
+                "display_name": "ephramd",
+                "link": "http://stackoverflow.com/users/1051622/ephramd"
+            },
+            "is_answered": false,
+            "view_count": 24,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1468230300,
+            "creation_date": 1467275056,
+            "question_id": 38117680,
+            "link": "http://stackoverflow.com/questions/38117680/problems-adding-ads-incompatibility-between-android-support-v4-and-v7",
+            "title": "Problems adding Ads. Incompatibility between android support v4 and v7?"
+        },
+        {
+            "tags": [
+                "android",
+                "android-layout",
+                "android-drawable",
+                "nine-patch"
+            ],
+            "owner": {
+                "reputation": 414,
+                "user_id": 3671509,
+                "user_type": "registered",
+                "accept_rate": 52,
+                "profile_image": "https://i.stack.imgur.com/v5AYr.jpg?s=128&g=1",
+                "display_name": "gikarasojo kinene",
+                "link": "http://stackoverflow.com/users/3671509/gikarasojo-kinene"
+            },
+            "is_answered": true,
+            "view_count": 22,
+            "accepted_answer_id": 38103054,
+            "answer_count": 2,
+            "score": 0,
+            "last_activity_date": 1468230249,
+            "creation_date": 1467201290,
+            "last_edit_date": 1467213112,
+            "question_id": 38098788,
+            "link": "http://stackoverflow.com/questions/38098788/9-patch-drawable-appears-bad-after-cleaning-and-rebuilding-project-in-a-new-andr",
+            "title": "9 patch drawable appears bad after cleaning and rebuilding project in a new android studio"
+        },
+        {
+            "tags": [
+                "android",
+                "android-layout",
+                "recyclerview",
+                "gridlayoutmanager",
+                "recyclerview-layout"
+            ],
+            "owner": {
+                "reputation": 6,
+                "user_id": 2284724,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/32038bbd8fb5c426f2ff98fe15c62db1?s=128&d=identicon&r=PG",
+                "display_name": "Hellothi11",
+                "link": "http://stackoverflow.com/users/2284724/hellothi11"
+            },
+            "is_answered": false,
+            "view_count": 35,
+            "answer_count": 2,
+            "score": 0,
+            "last_activity_date": 1468230119,
+            "creation_date": 1467621576,
+            "last_edit_date": 1467622826,
+            "question_id": 38180231,
+            "link": "http://stackoverflow.com/questions/38180231/android-custom-layout-manager-with-scroll-both-verical-and-horizontal-and-fill-i",
+            "title": "Android Custom Layout Manager with scroll both verical and horizontal and fill items by vertical first"
+        },
+        {
+            "tags": [
+                "android",
+                "android-fragments",
+                "bitmap",
+                "bytearray",
+                "android-adapter"
+            ],
+            "owner": {
+                "reputation": 79,
+                "user_id": 5074368,
+                "user_type": "registered",
+                "accept_rate": 73,
+                "profile_image": "https://graph.facebook.com/10153118318081559/picture?type=large",
+                "display_name": "Martin Seal",
+                "link": "http://stackoverflow.com/users/5074368/martin-seal"
+            },
+            "is_answered": true,
+            "view_count": 52,
+            "answer_count": 2,
+            "score": 1,
+            "last_activity_date": 1468230013,
+            "creation_date": 1468012608,
+            "last_edit_date": 1468157150,
+            "question_id": 38275514,
+            "link": "http://stackoverflow.com/questions/38275514/android-recycler-view-adapters-viewpagers-databases-bitmaps-and-out-of-memory",
+            "title": "android recycler view adapters, viewpagers, databases, bitmaps and out of memory errors"
+        },
+        {
+            "tags": [
+                "android",
+                "deeplink"
+            ],
+            "owner": {
+                "reputation": 123,
+                "user_id": 4122507,
+                "user_type": "registered",
+                "accept_rate": 37,
+                "profile_image": "https://www.gravatar.com/avatar/8bb492f74e7f5c157f876bf6749427eb?s=128&d=identicon&r=PG&f=1",
+                "display_name": "asdec90",
+                "link": "http://stackoverflow.com/users/4122507/asdec90"
+            },
+            "is_answered": false,
+            "view_count": 22,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1468229970,
+            "creation_date": 1468220959,
+            "question_id": 38301045,
+            "link": "http://stackoverflow.com/questions/38301045/open-a-url-with-option-of-installed-app-and-browser-in-android",
+            "title": "Open a Url with option of Installed App and Browser in Android"
+        },
+        {
+            "tags": [
+                "android",
+                "ksoap2",
+                "socketexception"
+            ],
+            "owner": {
+                "reputation": 1352,
+                "user_id": 444301,
+                "user_type": "registered",
+                "accept_rate": 52,
+                "profile_image": "https://www.gravatar.com/avatar/338053697385277e5ec9eb3b780f4331?s=128&d=identicon&r=PG",
+                "display_name": "Bartosz Bialecki",
+                "link": "http://stackoverflow.com/users/444301/bartosz-bialecki"
+            },
+            "is_answered": true,
+            "view_count": 6491,
+            "answer_count": 5,
+            "score": 0,
+            "last_activity_date": 1468229939,
+            "creation_date": 1340099862,
+            "question_id": 11098630,
+            "link": "http://stackoverflow.com/questions/11098630/sockettimeoutexception-in-android-using-ksoap2",
+            "title": "SocketTimeoutException in android using ksoap2"
+        },
+        {
+            "tags": [
+                "android",
+                "android-listview",
+                "android-service"
+            ],
+            "owner": {
+                "reputation": 4202,
+                "user_id": 719212,
+                "user_type": "registered",
+                "accept_rate": 85,
+                "profile_image": "https://www.gravatar.com/avatar/69211a100c0545e972aac3b398e44a16?s=128&d=identicon&r=PG",
+                "display_name": "R4j",
+                "link": "http://stackoverflow.com/users/719212/r4j"
+            },
+            "is_answered": true,
+            "view_count": 10675,
+            "accepted_answer_id": 20238868,
+            "answer_count": 2,
+            "score": 16,
+            "last_activity_date": 1468229777,
+            "creation_date": 1383999385,
+            "last_edit_date": 1402227035,
+            "question_id": 19875838,
+            "link": "http://stackoverflow.com/questions/19875838/download-multiple-files-with-a-progress-bar-in-listview-android",
+            "title": "Download multiple files with a progress bar in ListView Android"
+        },
+        {
+            "tags": [
+                "android",
+                "listview",
+                "phonecalls"
+            ],
+            "owner": {
+                "reputation": 1,
+                "user_id": 4966625,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/04aa0928efda759b4f2188eff4bfb39d?s=128&d=identicon&r=PG&f=1",
+                "display_name": "Vipin",
+                "link": "http://stackoverflow.com/users/4966625/vipin"
+            },
+            "is_answered": false,
+            "view_count": 18,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1468229700,
+            "creation_date": 1468228919,
+            "last_edit_date": 1468229155,
+            "question_id": 38303354,
+            "link": "http://stackoverflow.com/questions/38303354/getting-call-records-in-android",
+            "title": "Getting call records in android"
+        },
+        {
+            "tags": [
+                "android",
+                "windows",
+                "facebook"
+            ],
+            "owner": {
+                "reputation": 716,
+                "user_id": 535162,
+                "user_type": "unregistered",
+                "profile_image": "https://www.gravatar.com/avatar/589690f4b69039a575e04378c6e6243a?s=128&d=identicon&r=PG",
+                "display_name": "ravi babu",
+                "link": "http://stackoverflow.com/users/535162/ravi-babu"
+            },
+            "is_answered": true,
+            "view_count": 162334,
+            "protected_date": 1442965429,
+            "answer_count": 25,
+            "score": 143,
+            "last_activity_date": 1468229688,
+            "creation_date": 1291820933,
+            "last_edit_date": 1408220057,
+            "question_id": 4388992,
+            "link": "http://stackoverflow.com/questions/4388992/key-hash-for-android-facebook-app",
+            "title": "Key hash for Android-Facebook app"
+        },
+        {
+            "tags": [
+                "android",
+                "bitmap",
+                "image-resizing",
+                "bicubic",
+                "lanczos"
+            ],
+            "owner": {
+                "reputation": 108,
+                "user_id": 5342992,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/7df692f4907383e386b36a84b3d124e1?s=128&d=identicon&r=PG&f=1",
+                "display_name": "Jolinar",
+                "link": "http://stackoverflow.com/users/5342992/jolinar"
+            },
+            "is_answered": true,
+            "view_count": 515,
+            "answer_count": 4,
+            "score": 17,
+            "last_activity_date": 1468229576,
+            "creation_date": 1465644971,
+            "last_edit_date": 1467636149,
+            "question_id": 37763257,
+            "link": "http://stackoverflow.com/questions/37763257/android-bitmap-resizing-using-better-resampling-algorithm-than-bilinear-like-l",
+            "title": "Android: Bitmap resizing using better resampling algorithm than bilinear (like Lanczos3)"
+        },
+        {
+            "tags": [
+                "java",
+                "android",
+                "android-studio",
+                "android-sensors"
+            ],
+            "owner": {
+                "reputation": 38,
+                "user_id": 6276279,
+                "user_type": "registered",
+                "accept_rate": 50,
+                "profile_image": "https://www.gravatar.com/avatar/8b2e40a244e4f60d88400070bc197815?s=128&d=identicon&r=PG&f=1",
+                "display_name": "barmi",
+                "link": "http://stackoverflow.com/users/6276279/barmi"
+            },
+            "is_answered": true,
+            "view_count": 83,
+            "accepted_answer_id": 38193279,
+            "answer_count": 1,
+            "score": 1,
+            "last_activity_date": 1468229563,
+            "creation_date": 1467672198,
+            "last_edit_date": 1467915587,
+            "question_id": 38193053,
+            "link": "http://stackoverflow.com/questions/38193053/android-app-in-background",
+            "title": "Android app in background"
+        },
+        {
+            "tags": [
+                "android",
+                "navigation",
+                "navigation-drawer"
+            ],
+            "owner": {
+                "reputation": 200,
+                "user_id": 1502259,
+                "user_type": "registered",
+                "accept_rate": 80,
+                "profile_image": "https://www.gravatar.com/avatar/e080fe5ea57296137e14896028a09c04?s=128&d=identicon&r=PG",
+                "display_name": "Zaid Kajee",
+                "link": "http://stackoverflow.com/users/1502259/zaid-kajee"
+            },
+            "is_answered": false,
+            "view_count": 17,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1468229542,
+            "creation_date": 1468229542,
+            "question_id": 38303565,
+            "link": "http://stackoverflow.com/questions/38303565/android-navigation-drawer-icon-tint-of-single-item",
+            "title": "android navigation drawer icon tint of single item"
+        },
+        {
+            "tags": [
+                "java",
+                "android",
+                "expandablelistview"
+            ],
+            "owner": {
+                "reputation": 109,
+                "user_id": 3863255,
+                "user_type": "registered",
+                "profile_image": "https://graph.facebook.com/100001046536926/picture?type=large",
+                "display_name": "Rashiduzzaman Khan",
+                "link": "http://stackoverflow.com/users/3863255/rashiduzzaman-khan"
+            },
+            "is_answered": false,
+            "view_count": 27,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1468229491,
+            "creation_date": 1468228537,
+            "question_id": 38303225,
+            "link": "http://stackoverflow.com/questions/38303225/is-there-any-way-to-design-5-level-expandable-listview-in-android",
+            "title": "Is there any way to design 5 level expandable listview in android?"
+        }
+    ],
+    "has_more": true,
+    "quota_max": 300,
+    "quota_remaining": 298
+}

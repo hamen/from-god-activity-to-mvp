@@ -5,15 +5,14 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import lombok.Data;
 import lombok.Getter;
-import lombok.experimental.Accessors;
 
-@Accessors(prefix="m")
+@Data
 public class SearchResponse {
 
     @Expose
     @Getter
     @SerializedName("items")
-    private List<Question> mQuestions;
-
+    private List<Question> questions;
 }
