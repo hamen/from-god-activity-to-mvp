@@ -40,7 +40,6 @@ class StackOverflowApiManagerTest {
     }
 
     @Test
-    @Throws(Exception::class)
     fun `rx request questions list for android term`() {
         val server = MockWebServer()
         val file = File(this.javaClass.classLoader.getResource("questions.json").file)

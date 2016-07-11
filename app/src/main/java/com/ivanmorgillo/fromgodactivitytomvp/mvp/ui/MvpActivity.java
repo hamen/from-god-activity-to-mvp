@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,6 +107,11 @@ public class MvpActivity extends AppCompatActivity implements NavigationView.OnN
     @Override
     public void updateList(List<Question> questions) {
         adapter.setQuestions(questions);
+    }
+
+    @Override
+    public void showErrorMessage() {
+        Toast.makeText(this, R.string.error_on_list_retrieving, Toast.LENGTH_SHORT).show();
     }
 
     @Override

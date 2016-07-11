@@ -30,7 +30,6 @@ class MvpPresenterTest {
 
     @Before
     fun setUp() {
-        whenever(apiClient.getSearchResponse("android")).thenReturn(Observable.just(searchResponse))
         presenter.setView(view)
 
         RxJavaHooks.setOnIOScheduler { Schedulers.immediate() }
@@ -48,12 +47,23 @@ class MvpPresenterTest {
     }
 
     @Test
-    @Throws(Exception::class)
     fun loadQuestions() {
+        whenever(apiClient.getSearchResponse("android")).thenReturn(Observable.just(searchResponse))
+
         presenter.loadQuestions()
 
         verify(view).showProgress()
         verify(view).updateList(searchResponse.questions)
         verify(view).hideProgress()
+    }
+
+    @Test
+    fun `loadQuestions but something goes wrong`() {
+        whenever(apiClient.getSearchResponse("android")).thenReturn(Observable.error(Throwable("AAAAAAAAAAHHHH")))
+        presenter.loadQuestions()
+
+        verify(view).showProgress()
+        verify(view).hideProgress()
+        verify(view).showErrorMessage()
     }
 }

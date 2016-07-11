@@ -15,4 +15,6 @@ public interface IMvpView {
     void hideList();
 
     void updateList(List<Question> questions);
+
+    void showErrorMessage();
 }

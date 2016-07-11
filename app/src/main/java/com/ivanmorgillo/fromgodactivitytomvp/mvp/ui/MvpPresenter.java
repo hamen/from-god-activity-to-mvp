@@ -4,8 +4,6 @@ import com.ivanmorgillo.fromgodactivitytomvp.api.StackOverflowApiManager;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.Question;
 import com.ivanmorgillo.fromgodactivitytomvp.api.models.SearchResponse;
 
-import android.util.Log;
-
 import java.util.List;
 
 import javax.inject.Inject;
@@ -36,6 +34,7 @@ public class MvpPresenter {
             .doOnSubscribe(new Action0() {
                 @Override
                 public void call() {
+                    view.hideList();
                     view.showProgress();
                 }
             })
@@ -55,12 +54,13 @@ public class MvpPresenter {
 
                 @Override
                 public void onError(Throwable e) {
-                    Log.d("GDG", e.getLocalizedMessage());
                     view.hideProgress();
+                    view.showErrorMessage();
                 }
 
                 @Override
                 public void onNext(List<Question> questions) {
+                    view.showList();
                     view.updateList(questions);
                 }
             });
