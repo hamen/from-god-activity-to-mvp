@@ -25,11 +25,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,8 +44,6 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
     Gson gson = new GsonBuilder().registerTypeAdapter(DateTime.class, dateSerializer).create();
 
     private StackOverflowApiManager apiManager;
-
-    private RecyclerView recyclerView;
 
     private QuestionsAdapter adapter;
 
@@ -73,7 +71,7 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(GodActivity.this);
@@ -101,7 +99,7 @@ public class GodActivity extends AppCompatActivity implements NavigationView.OnN
             try {
                 questions = posts.execute().body().getQuestions();
             } catch (IOException e) {
-                Log.e("GDG", e.getLocalizedMessage());
+                Toast.makeText(GodActivity.this, getString(R.string.error_on_list_retrieving), Toast.LENGTH_SHORT).show();
             }
             return questions;
         }
